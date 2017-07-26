@@ -9,5 +9,8 @@
   "license": "MIT",
   "dependencies": {
     "googleapis": "20.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.3.0"
   }
 }

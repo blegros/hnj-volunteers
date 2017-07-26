@@ -1,3 +1,5 @@
+const process = require('process');
+
 const GOOGLE_CREDENTIALS = JSON.parse(process.env.HNJ_VOLUNTEERS_JWT),
   SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'],
   SHEET_RESOURCE_ID = '1nt0w3FpVl2RPbloI7H_tGWIaGF38PfXdcm7UnrpWXJM',
