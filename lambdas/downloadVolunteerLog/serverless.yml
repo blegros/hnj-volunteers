@@ -42,12 +42,13 @@ provider:
 #            - "/*"
 
 # you can define service wide environment variables here
-environment:
-  HNJ_VOLUNTEERS_JWT: ${env:HNJ_VOLUNTEERS_JWT}
+
 
 # you can add packaging information here
-#package:
-#  include:
+package:
+  include:
+    - ./*.js
+    - ../node_modules/**
 #    - include-me.js
 #    - include-me-dir/**
 #  exclude:
@@ -57,6 +58,8 @@ environment:
 functions:
   downloadVolunteerLog:
     handler: index.downloadVolunteerLog
+    environment:
+      HNJ_VOLUNTEERS_JWT: ${env:HNJ_VOLUNTEERS_JWT}
     events:
         - http:
             path: logs/volunteers
